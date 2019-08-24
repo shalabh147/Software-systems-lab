@@ -2,7 +2,7 @@ import tarfile
 import os
 import sys
 
-if(len(sys.argv)<3):
+if(len(sys.argv) < 3):
     print("Too few arguments")
     exit()
 
@@ -14,24 +14,24 @@ for arg in sys.argv[2:]:
     else:
         notexists.append(arg)
 
-if(len(exists)!=0):
-    tar=tarfile.open(sys.argv[1],'w')
+if(len(exists) != 0):
+    tar = tarfile.open(sys.argv[1], 'w')
 else:
     print("All files are missing")
     exit()
 
 for arg in exists:
     if(os.path.isdir(arg)):
-        for root,dirs,files in os.walk(arg,topdown=True):
+        for root, dirs, files in os.walk(arg, topdown=True):
             for file in files:
-                path=os.path.join(os.path.abspath(root),file)
-                path=path.replace('/','-')
+                path = os.path.join(os.path.abspath(root), file)
+                path = path.replace('/', '-')
                 if(path not in tar.getnames()):
-                    tar.add(os.path.join(root,file),path)
+                    tar.add(os.path.join(root, file), path)
     elif(os.path.isfile(arg)):
-        path=os.path.abspath(arg).replace('/','-')
+        path = os.path.abspath(arg).replace('/', '-')
         if(path not in tar.getnames()):
-            tar.add(arg,os.path.abspath(arg).replace('/','-'))
+            tar.add(arg, os.path.abspath(arg).replace('/', '-'))
 
 print("Successfully compressed")
 for file in notexists:
