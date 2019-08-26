@@ -6,7 +6,7 @@ file = open(sys.argv[1])
 freq = {}
 
 for each in file:
-    emails = re.findall("\\b(?:[a-zA-Z0-9]+[\._]{0,1})+[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.{0,1})+[a-zA-Z]+\\b", each)
+    emails = re.findall("\\b(?:[a-zA-Z0-9]+[\._]{0,})+[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.{0,})+[a-zA-Z]+\\b", each)
     numbers = re.findall("\\b[1-9][0-9]{9}\\b", each)
     for match in emails:
         if match not in freq:
