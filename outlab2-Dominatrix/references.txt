@@ -1,0 +1,15 @@
+http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-7.html
+
+https://ryanstutorials.net/bash-scripting-tutorial/bash-input.php
+
+https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+
+https://askubuntu.com/questions/647798/how-to-restrict-the-decimal-places-in-awk-without-rounding-off
+
+https://unix.stackexchange.com/questions/283407/can-sed-save-its-output-to-a-file
+
+https://www.google.com/search?q=how+to+build+arrays+inside+awk&oq=how+to+build+arrays+inside+awk&aqs=chrome..69i57j0.5175j0j4&sourceid=chrome&ie=UTF-8
+
+
+
+
