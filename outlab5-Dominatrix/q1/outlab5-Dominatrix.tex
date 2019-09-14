@@ -1,59 +1,57 @@
 \documentclass[12pt]{article}
+
+\title{\vspace*{55mm}\Huge\textbf{Software Systems Lab: Outlab 5} \\ \textbf{\LaTeX (80 marks)}}
+\author{\huge Dominatrix \\ \\ \large 180050005 \\ 180050095 \\ 18D070026}
+\date{14 September, 2019}
+
 \usepackage{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{ulem}
-%\usepackage{bera}
-%\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{imakeidx}
 \usepackage{sectsty}
+\usepackage{titling}
 \usepackage[shortlabels]{enumitem}
-\geometry{a4paper,total={6in,8in},margin=1.2in,bottom=1in}
-\sectionfont{\fontsize{19}{18.5}\selectfont}
-\setlength{\parindent}{1 em}
+\geometry{a4paper,total={6in,9in},left=3cm,top=1in}
+\sectionfont{\fontsize{17}{5}\selectfont}
+\setlength{\parindent}{0.7 em}
 \newcommand{\LATEX}{\LaTeX}
 \newcommand{\comment}[1]{}
-%font not set to bera right now. just package imported
+\usepackage{bera}
 \begin{document}
 
-	
+\fontdimen2\font=0.4ex
+
+\begin{titlingpage}
+	\maketitle
+\end{titlingpage}
 \newpage
 \tableofcontents
 
 
 \newpage
 
-\begin{flushleft}
- This is a LATEXdocument for the course \textbf{Software Systems Lab} with course
-code \textit{CS 251}. You need to replicate the document. Spacing need not be
-matched perfectly but page numbers should be. \textbf{1 mark is for the title page}.
-Bonus marks will be given only if you score full (80/80) in the rest.
-\end{flushleft}
+ This is a \LaTeX document for the course \textbf{Software Systems Lab} with course code \textit{CS 251}. You need to replicate the document. Spacing need not be matched perfectly but page numbers should be. \textbf{1 mark is for the title page}. Bonus marks will be given only if you score full (80/80) in the rest.
 
  
 \section{ Introduction (4 marks) }%fontsize of introduction to be reduced
-\par
+\indent
 
 
-\textbf{\LaTeX} is a word processor and document markup language. It is distinguished
-from typical word processors such as Microsoft Word and Apple Pages in that
-the writer uses plain text as opposed to formatted text, relying on markup
-tagging conventions to define the general structure of a document (such as
-article, book, and letter), to stylise text throughout a document (such as \textbf{bold}
-and italic), and to add citations and cross-referencing. A \textbf{\TeX} distribution such
-as TEX Live or \textbf{MikTeX} is used to produce an output file (such as PDF or DVI)
+\textbf{\LaTeX} is a word processor and document markup language. It is distinguished from typical word processors such as Microsoft Word and Apple Pages in that the writer uses plain text as opposed to formatted text, relying on markup tagging conventions to define the general structure of a document (such as article, book, and letter), to stylise text throughout a document (such as \textbf{bold} and italic), and to add citations and cross-referencing. A \textbf{\TeX} distribution such as \textbf{\TeX} \textbf{Live} or \textbf{MikTeX} is used to produce an output file (such as PDF or DVI)
 suitable for printing or digital distribution.
 \newline
-\par
+
  
-\LaTeX is used for the communication and publication of scientific documents
+\textbf{\LaTeX} is used for the communication and publication of scientific documents
 in many fields, including mathematics, physics, computer science, statistics,
 economics, and political science. It also has a prominent role in the preparation
-and publication of books and articles that contain complex multilingual materials, such as Sanskrit and Arabic. \LATEX uses the \TeX typesetting program for
+and publication of books and articles that contain complex multilingual materials, such as Sanskrit and Arabic. \textbf{\LATEX} uses the TeX typesetting program for
 formatting its output, and is itself written in the TeX macro language.
 \newline
-\par
 
 
 \textbf{\LaTeX} is widely used in academia. \textbf{\LaTeX} can be used as a standalone document preparation system, or as an intermediate format. In the latter role, for
@@ -87,9 +85,9 @@ Here we are using \textbf{itemize} to generate unordered list.
 \begin{itemize}
  
  \setlength\itemsep{1em}
-	\item LATEX typesets a file of text using the TEX program.
-	\item  LATEX is widely used in academia for the communication and publication of scientific documents in many fields, including mathematics, physics, computer science, statistics, economics and political science.
-	\item LATEX can be used as a standalone document preparation system or as an intermediate format.
+	\item \LATEX typesets a file of text using the TEX program.
+	\item \LATEX is widely used in academia for the communication and publication of scientific documents in many fields, including mathematics, physics, computer science, statistics, economics and political science.
+	\item \LATEX can be used as a standalone document preparation system or as an intermediate format.
 	\item \textbf{We have used renewcommand for the bullets to be bigger.}
 	\item Look at the \textbf{item separation space}, and \textbf{change it} accordingly.
 \end{itemize}
