@@ -1,0 +1,40 @@
+school:
+	@echo "school"
+MPC: school
+	@echo "MPC"
+JEE:  MPC
+	@echo "JEE"
+IIT: JEE 
+	@echo "IIT"
+NIT: JEE 
+	@echo "NIT"
+Soft.Eng: IIT
+	@echo "Soft.Eng"
+MS: IIT
+	@echo "MS"
+Research.Eng: Soft.Eng
+	@echo "MS"
+	@echo "Research.Eng"
+Hard.Eng: NIT
+	@echo "Hard.Eng"
+
+BiPC: school
+	@echo "BiPC"
+NEET: BiPC
+	@echo "NEET"
+AIIMS: NEET
+	@echo "AIIMS"
+Gynic: AIIMS
+	@echo "Gynic"
+ENT: AIIMS
+	@echo "ENT"
+MD: AIIMS
+	@echo "MD"
+IVF.spec: Gynic
+	@echo "MD"
+	@echo "IVF.spec"
+CMC: NEET
+	@echo "CMC"
+Dentist: CMC
+	@echo "Dentist" 
+

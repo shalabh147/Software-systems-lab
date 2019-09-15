@@ -5,3 +5,6 @@
 \contentsline {section}{\numberline {3}Mathematical formulae and notations (15 marks)}{4}{section.3}
 \contentsline {subsection}{\numberline {3.1}Equation Array (4 marks)}{4}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Prepositional Formulae using Various Operators (2 marks)}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Alphabets (3 marks + 1 mark for table)}{4}{subsection.3.3}
+\contentsline {section}{\numberline {4}Tables (10 marks)}{5}{section.4}
+\contentsline {section}{\numberline {5}Image Insert (7 + 7 marks)}{6}{section.5}

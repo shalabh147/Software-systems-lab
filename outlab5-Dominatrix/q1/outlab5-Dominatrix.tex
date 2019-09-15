@@ -14,6 +14,7 @@
 \usepackage{imakeidx}
 \usepackage{sectsty}
 \usepackage{titling}
+\usepackage{graphicx}
 \usepackage[shortlabels]{enumitem}
 \geometry{a4paper,total={6in,9in},left=3cm,top=1in}
 \sectionfont{\fontsize{17}{5}\selectfont}
@@ -21,6 +22,11 @@
 \newcommand{\LATEX}{\LaTeX}
 \newcommand{\comment}[1]{}
 \usepackage{bera}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\graphicspath{{./}}
 \begin{document}
 
 \fontdimen2\font=0.4ex
@@ -39,7 +45,6 @@
  
 \section{ Introduction (4 marks) }%fontsize of introduction to be reduced
 \indent
-
 
 \textbf{\LaTeX} is a word processor and document markup language. It is distinguished from typical word processors such as Microsoft Word and Apple Pages in that the writer uses plain text as opposed to formatted text, relying on markup tagging conventions to define the general structure of a document (such as article, book, and letter), to stylise text throughout a document (such as \textbf{bold} and italic), and to add citations and cross-referencing. A \textbf{\TeX} distribution such as \textbf{\TeX} \textbf{Live} or \textbf{MikTeX} is used to produce an output file (such as PDF or DVI)
 suitable for printing or digital distribution.
@@ -147,4 +152,56 @@ $cos^3θ + sin3
 = (cosθ + sinθ)(1/2)(2 − 2cosθsinθ)(3) (3)
 = (1/2)(cosθ + sinθ)(2 − sin(2θ)) (4)$
 }
+Figure 2: Screenshot: Generated Notification
+
+
+\subsection{Alphabets (3 marks + 1 mark for table)}
+\medskip
+\begin{center}
+
+\begin{tabular}{ |c|c| }
+\hline
+Binary Operators: & $\times$   $\otimes$   $\oplus$   $\cup$   $\cap$  \\ [3 ex]
+\hline
+Relation Operators: & $\subset$   $\supset$    $\subseteq$    $\supseteq$    $< >$ \\ [3 ex]
+\hline
+Others : & $\int$   $\oint$    $\Sigma$    $\Pi$ \\ [3 ex]
+\hline
+\end{tabular}
+\end{center}
+
+
+
+
+
+\newpage
+
+
+
+\section{Tables (10 marks)}
+\indent
+To combine rows a package must be imported with in your preamble, then you
+can use the XXXXXXX command in your document. The table below includes
+mathematical notations, which you can produce by embedding the expression
+in $ $ delimiters. For subscript, use underscore and for superscript, use carrot. \\ \\
+\newpage
+
+\section{Image Insert (7 + 7 marks)}
+
+\hspace{1.5 ex} \hspace{2 ex} Now, we will import images side by side in the same document.
+\begin{figure}[!h]
+\begin{subfigure}[t]{.37\textwidth}
+  \centering
+  \includegraphics[width=.65\linewidth]{1}
+  \caption*{Figure 1: Screenshot: Mobile
+Interface}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}[t]{.37\textwidth}
+  \centering
+  \includegraphics[width=.65\linewidth]{2}
+  \caption*{Figure 2: Screenshot: Generated Notification}
+  \label{fig:sub2}
+\end{subfigure}
+\end{figure}
 \end{document}

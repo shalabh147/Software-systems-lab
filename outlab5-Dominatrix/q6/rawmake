@@ -1,0 +1,5 @@
+helloworld:
+	@(g++ -c helloworld.cpp -o helloworld)
+usepthread:
+	@(g++ -c usepthread.cpp -o usepthread)
+
