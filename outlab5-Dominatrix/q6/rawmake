@@ -1,5 +1,24 @@
 helloworld:
-	@(g++ -c helloworld.cpp -o helloworld)
-usepthread:
-	@(g++ -c usepthread.cpp -o usepthread)
-
+	@(g++ helloworld.cpp -o helloworld)
+usespthread:
+	@(g++ usespthread.cpp -o usespthread -lpthread)
+libMyEngineDynamic.so:
+	@(g++ -c -w -fpic myengine/myengine.cpp -o a1.o)
+	@(g++ -shared a1.o -o libMyEngineDynamic.so )
+libMyEngineStatic.a:
+	@(g++ -c -w myengine/myengine.cpp -o a2.o)
+	@(ar rcs libMyEngineStatic.a a2.o)
+.PHONY : installdynamic
+installdynamic: libMyEngineDynamic.so
+	@(sudo cp libMyEngineDynamic.so /usr/local/lib)
+	@(sudo cp myengine/myengine.hpp /usr/local/include)
+.PHONY : installstatic
+installstatic: libMyEngineStatic.a
+	@(sudo cp libMyEngineStatic.a /usr/local/lib)
+	@(sudo cp myengine/myengine.hpp /usr/local/include)
+mygamestatic: installstatic
+	@(g++ mygame/mygame.cpp -o mygamestatic -lMyEngineStatic)
+mygamedynamic: installdynamic
+	@(g++ mygame/mygame.cpp -o mygamedynamic -lMyEngineDynamic)
+clean:
+	@(rm -rf a1.o a2.o libMyEngineStatic.a libMyEngineDynamic.so)
