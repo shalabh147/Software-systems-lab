@@ -86,7 +86,7 @@ changed to maths symbols.
  
 \section{Pointers (3 + 2 + 1 marks)}
 Here we are using \textbf{itemize} to generate unordered list.
-%\renewcommand\labelitemi{\large$\bullet$} %baad me karenge
+\renewcommand\labelitemi{\large$\bullet$} %baad me karenge
 \begin{itemize}
  
  \setlength\itemsep{1em}
@@ -121,10 +121,12 @@ computer science, statistics, economics and political science.
 Following is another type of a pointer (\textbf{description}).
 
 
-\textbf{CS 213} Data Structures and Algorithm
+\begin{description}
+\item [CS 213] Data Structures and Algorithm
+\item [CS 215] DSA
+\end{description} 
 %need to have some spaces between lines
-\textbf{CS 215} Data analysis and interpretation
-\newpage
+
 
 \section{Mathematical formulae and notations (15 marks)}
 
@@ -174,6 +176,7 @@ Others : & $\int$   $\oint$    $\Sigma$    $\Pi$ \\ [3 ex]
 
 
 
+
 \newpage
 
 
@@ -190,18 +193,43 @@ in $ $ delimiters. For subscript, use underscore and for superscript, use carrot
 
 \hspace{1.5 ex} \hspace{2 ex} Now, we will import images side by side in the same document.
 \begin{figure}[!h]
-\begin{subfigure}[t]{.37\textwidth}
+\captionsetup{width = .65\linewidth}
+\begin{subfigure}[t]{.5\textwidth}
   \centering
   \includegraphics[width=.65\linewidth]{1}
-  \caption*{Figure 1: Screenshot: Mobile
+  \caption*{ Screenshot: Mobile
 Interface}
   \label{fig:sub1}
 \end{subfigure}%
-\begin{subfigure}[t]{.37\textwidth}
+\begin{subfigure}[t]{.5\textwidth}
   \centering
   \includegraphics[width=.65\linewidth]{2}
   \caption*{Figure 2: Screenshot: Generated Notification}
   \label{fig:sub2}
 \end{subfigure}
 \end{figure}
+
+The images have been put in, and they are side by side in the same document
+on the same page. We have used the package floatrow and graphicx to import
+images on Page 6.\par
+In case you would like to see an alternative method to align the images, for
+instance images as subfigures, here it is.
+
+\begin{figure}[!h]
+\captionsetup{width = .5\linewidth}
+\begin{subfigure}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.65\linewidth , height = 4 cm]{3}
+  \caption*{ Screenshot: Mobile
+Interface}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.65\linewidth , height = 4cm]{4}
+  \caption*{Figure 2: Screenshot: Generated Notification}
+  \label{fig:sub2}
+\end{subfigure}
+\end{figure}
+
 \end{document}
