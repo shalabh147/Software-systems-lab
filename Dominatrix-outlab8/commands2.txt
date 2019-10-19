@@ -1,0 +1,9 @@
+connect 192.168.1.125 5000
+add 1
+read 1
+read 1
+read 1
+disconnect
+connect 192.168.1.125 5000
+add 1
+disconnect
