@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">recyclerCard</string>
+    <string name="title_activity_sub_task_detail">SubTaskDetail</string>
+</resources>
