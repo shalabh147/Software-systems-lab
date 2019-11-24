@@ -1,0 +1,91 @@
+\hypertarget{classLinkList}{}\doxysection{Link\+List$<$ T $>$ Class Template Reference}
+\label{classLinkList}\index{LinkList$<$ T $>$@{LinkList$<$ T $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLinkList_a38b2e77462f2733bc9254c3fd86b453f}{insert\+Front}} (T item)
+\item 
+void \mbox{\hyperlink{classLinkList_af0f013b563ae0abaec5c22037ec31e28}{insert\+Rear}} (T item)
+\item 
+void \mbox{\hyperlink{classLinkList_ae4d698669105fff350b578de53e7e389}{remove\+Front}} ()
+\item 
+void \mbox{\hyperlink{classLinkList_af7894809851c2478fdb3272bd0584b6c}{remove\+Rear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classLinkList_a62eb2e6bd32c8bdaa9bd26b5cef6c2c8}{main}} (String a\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class implementing a Deque using a doubly linked list. ~\newline
+ Deque (De\+Queue) stands for Double-\/ended Queue. ~\newline
+It is just like a queue but does not support F\+I\+FO structure. ~\newline
+ Insertion and deletion can be done from both side( F\+R\+O\+N\+T \& R\+E\+A\+R). ~\newline
+ Implementation uses the Node class. Data members are a couple of nodes to store the data at the front and rear of the deque. Member functions have been documentated. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the elements that can be stored in the deque \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLinkList_a38b2e77462f2733bc9254c3fd86b453f}\label{classLinkList_a38b2e77462f2733bc9254c3fd86b453f}} 
+\index{LinkList$<$ T $>$@{LinkList$<$ T $>$}!insertFront@{insertFront}}
+\index{insertFront@{insertFront}!LinkList$<$ T $>$@{LinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertFront()}{insertFront()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classLinkList}{Link\+List}}$<$ T $>$.insert\+Front (\begin{DoxyParamCaption}\item[{T}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert item at the front of the linked list 
+\begin{DoxyParams}{Parameters}
+{\em item} & element to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLinkList_af0f013b563ae0abaec5c22037ec31e28}\label{classLinkList_af0f013b563ae0abaec5c22037ec31e28}} 
+\index{LinkList$<$ T $>$@{LinkList$<$ T $>$}!insertRear@{insertRear}}
+\index{insertRear@{insertRear}!LinkList$<$ T $>$@{LinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertRear()}{insertRear()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classLinkList}{Link\+List}}$<$ T $>$.insert\+Rear (\begin{DoxyParamCaption}\item[{T}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert item at the rear of the linked list 
+\begin{DoxyParams}{Parameters}
+{\em item} & element to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLinkList_a62eb2e6bd32c8bdaa9bd26b5cef6c2c8}\label{classLinkList_a62eb2e6bd32c8bdaa9bd26b5cef6c2c8}} 
+\index{LinkList$<$ T $>$@{LinkList$<$ T $>$}!main@{main}}
+\index{main@{main}!LinkList$<$ T $>$@{LinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void \mbox{\hyperlink{classLinkList}{Link\+List}}$<$ T $>$.main (\begin{DoxyParamCaption}\item[{String}]{a\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+The main function. ~\newline
+ Contains several calls to member of \mbox{\hyperlink{classLinkList}{Link\+List}} class to an instance created inside the function \mbox{\Hypertarget{classLinkList_ae4d698669105fff350b578de53e7e389}\label{classLinkList_ae4d698669105fff350b578de53e7e389}} 
+\index{LinkList$<$ T $>$@{LinkList$<$ T $>$}!removeFront@{removeFront}}
+\index{removeFront@{removeFront}!LinkList$<$ T $>$@{LinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeFront()}{removeFront()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classLinkList}{Link\+List}}$<$ T $>$.remove\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes the item at the front of the linked list \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLinkList_af7894809851c2478fdb3272bd0584b6c}\label{classLinkList_af7894809851c2478fdb3272bd0584b6c}} 
+\index{LinkList$<$ T $>$@{LinkList$<$ T $>$}!removeRear@{removeRear}}
+\index{removeRear@{removeRear}!LinkList$<$ T $>$@{LinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeRear()}{removeRear()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classLinkList}{Link\+List}}$<$ T $>$.remove\+Rear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes the item at the rear of the linked list \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{LinkList_8java}{Link\+List.\+java}}\end{DoxyCompactItemize}

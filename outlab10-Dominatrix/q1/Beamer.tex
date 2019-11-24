@@ -1,0 +1,144 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{kpfonts}
+\usepackage{boxedminipage}
+\usepackage{bcprules}
+\usepackage{tikz}
+\usetheme{CambridgeUS}
+\usetikzlibrary{positioning,arrows}
+\usetikzlibrary{shapes.geometric}
+%%%%%%%%%%%%%%%%Title Page%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Lambda Calculus]{Introduction to Beamer}
+\subtitle[]{}
+\author[F. last]{Akkapaka Saikiran}
+\institute[IITB]{
+  Department of Computer Science and Engineering\\
+  IIT Bombay.\\
+  Powai, Mumbai - 400076\\[1ex]
+  \texttt{psycherun@cse.iitb.ac.in}
+}
+\date[\today]{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newtheorem{exercise}{Exercise}
+
+
+\begin{document}
+%--- the titlepage frame -------------------------%
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+\tikzstyle{rectanglebox} = [draw, rectangle, minimum height=6em, minimum width=10.5em]
+    \tikzstyle{new} = [coordinate]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\bf  This is the title}
+Beamer is a \LaTeX \:class for preparing presentations.
+
+\begin{enumerate}
+\item Slides are called frames in Beamer.
+\item This is the usual ordered list in \LaTeX.
+\item Following slides will contain random content which will show you various ways of using it. You need to replicate it.
+\item Of course! we will give you boilerplate code!
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{Type Rules}
+\begin{figure}[htb]
+\includegraphics[width=0.75\textwidth]{type-lattice.pdf}
+\caption{This is the caption}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]{Type Rules}
+
+\begin{itemize}
+    \item A substitution is a list of pairs denoted as $ S = \{\alpha_1 /\tau_1 \ldots \alpha_n/\tau_n \}$ .
+    \item A substitution $S$ applied on a type expression $\sigma$, denoted by $S (\sigma )$ involves simultaneous substitution of the variables $ \alpha_1 \ldots \alpha_n$, if they occur free in $\sigma$, by the corresponding type expressions $\tau_1\ldots \tau_n$.
+
+    \begin{block}{Definition}
+    Let $\sigma = \forall \alpha_1 \ldots \alpha_m .\tau$ and $\sigma_0 = \forall \beta_1 \ldots \beta_n.\tau_0 $. Then $\sigma_0$ is a \textit{generic instance} of $\sigma$ , iff there is a substitution $S$ acting only on $\{\alpha_1 \ldots \alpha_m \}$ such that $\tau^{\prime}$ = $S(\tau)$ and no $\beta_i$ is free in $\sigma$.
+    \end{block}
+   
+    \item Clearly, the restriction that no $\beta_i$ is free in $\sigma$ is needed, else we would have absurdities like $\alpha \rightarrow Int \le \forall \alpha.\alpha \rightarrow Int $.
+   
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{\bf Recapitulation – Type rules for $\lambda_2$}
+
+\begin{equation}
+    \Gamma \cup \{x :: \sigma \} \vdash x :: \sigma \tag{\sc Var}
+\end{equation}  
+\vspace{-5pt}
+\begin{equation}
+    \Gamma \cup \{x :: \sigma \} \vdash c :: \sigma \tag{\sc Con}
+\end{equation}
+\vspace{0pt}
+\begin{equation}
+    \frac{\Gamma \vdash M :: \sigma \; \; \; \; \; \; \; \; \sigma^\prime \ge \sigma}
+    {\Gamma \vdash M :: \sigma^\prime} \tag{\sc Inst}
+\end{equation}
+\vspace{5pt}
+\begin{equation}
+    \frac{\Gamma \vdash M :: \sigma \; \; \; \; \; \; \; \; \alpha \notin FV(\Gamma)}
+    {\Gamma \vdash M :: \forall \alpha.\sigma} \tag{\sc Gen}
+\end{equation}
+\vspace{5pt}
+\begin{equation}
+    \frac{\Gamma \vdash M :: \tau_1 \rightarrow \tau_2 \; \; \; \; \; \; \; \; \Gamma \vdash N :: \tau}
+    {\Gamma \vdash M \; \:  N :: \tau_2} \tag{\sc M-App}
+\end{equation}
+\vspace{5pt}
+\begin{equation}
+    \frac{\Gamma,x :: \tau_1 \vdash M :: \tau_2}
+    {\Gamma \vdash \lambda x.M :: \tau_1 \rightarrow \tau_2} \tag{\sc M-Abs}
+\end{equation}
+   
+\end{frame}
+
+
+\begin{frame}[fragile]{\bf Hindley-Milner - Type checking applications}
+\setbeamertemplate{enumerate items}[default]
+\begin{enumerate}[1:]
+    \item t \textbf{is a variable} x
+    \begin{tikzpicture}
+    
+    \node [new]                 (input_lines)     {};
+    \node [rectanglebox, right=6em of input_lines ]   (model)     {\( x \)};
+    \node [new, right=6em of model, yshift=2em] (output1)    {};
+    \node [new, right=6em of model, yshift=-2em] (output2)  {};
+    \node [below=0.2em of model](figure caption){$\Gamma x = \forall\alpha_{1},\ldots\alpha_{n}\cdot\tau$};
+    \draw (input_lines) edge[->,thick,>=stealth] node[above, xshift=-2.3em]{$\Gamma$} (model);
+    \draw (model)edge[->,thick,>=stealth, out=20,looseness=0]node[above, xshift=4em]{ $\tau[\alpha_{1}/\beta_{1},\ldots \alpha_{n}/\beta_{n}], ~\beta_{1}, \ldots \beta_{n} \notin \tau$}(output1);
+    \draw (model)edge[->,thick,>=stealth, out=-20,looseness=0]node[below, xshift=4em] {{The identity substitution $\theta_{id}$}} (output2);
+\end{tikzpicture}
+   
+    \begin{itemize}
+        \item $\beta_1 , \ldots , \beta_n$ are fresh variables.
+        \item Reason for monomorphising the type of $x$: We try to find the type of a variable only in the context of an application, and our application is monomorphic.
+    \end{itemize}
+\end{enumerate}
+       
+\end{frame}
+
+\begin{frame}[fragile]{\bf Hindley-Milner - Type checking applications}
+\setbeamertemplate{enumerate items}[default]
+\begin{enumerate}[1]
+    \item Typecheck $e_1$ with the initial environment $\Gamma$. Result is $\tau_1$ and $\theta_1$.
+    \item Typecheck $e_2$ with the environment $\theta_1\Gamma$. Result is $\tau_2$ and $\theta_2$.
+    \item Unify $\theta_2 \tau_1$ and $\tau_2 \rightarrow \alpha$. Assume that unifier is $\theta$. And the unified term $(\theta \; \alpha)$ is $\tau_3$.
+    \item Type of the application is $\tau_3$ and the final substitution is $\theta \circ \theta_2 \circ \theta_1$.
+\end{enumerate}
+
+\end{frame}
+
+\end{document}
+
+

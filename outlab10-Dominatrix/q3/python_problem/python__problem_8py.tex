@@ -1,0 +1,106 @@
+\hypertarget{python__problem_8py}{}\doxysection{python\+\_\+problem.\+py File Reference}
+\label{python__problem_8py}\index{python\_problem.py@{python\_problem.py}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{python__problem_8py_a3e14eabd673d5450fc9ad0f55944ddbc}{python\+\_\+problem.\+make}} (filename)
+\begin{DoxyCompactList}\small\item\em Reads a file containing newline seperated integers and returns a list of those integers. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{python__problem_8py_aa5fcea23fc1ba14c5e21dfeb25a73376}{python\+\_\+problem.\+fun1}} (l)
+\begin{DoxyCompactList}\small\item\em Sorts an input list in ascending order. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{python__problem_8py_aeb8631d95a0e5c21716de1efa0a93f88}{python\+\_\+problem.\+fun2}} (l, x)
+\begin{DoxyCompactList}\small\item\em Performs binary search for a specified input value on a given input list which is assumed to be sorted in ascending order. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{python__problem_8py_aecd5932c95cd5087a63f7a9cdd9a9261}{python\+\_\+problem.\+fun3}} (L)
+\begin{DoxyCompactList}\small\item\em Calculates the determinant of an input matrix given in the format of a list whose elements are lists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{python__problem_8py_a57cd50d64eeaf609bf3db7738032930d}\label{python__problem_8py_a57cd50d64eeaf609bf3db7738032930d}} 
+def {\bfseries python\+\_\+problem.\+L} = make(\char`\"{}data\char`\"{})
+\item 
+\mbox{\Hypertarget{python__problem_8py_a7e9d5a08cba97a3d06f7ae7352de605c}\label{python__problem_8py_a7e9d5a08cba97a3d06f7ae7352de605c}} 
+def {\bfseries python\+\_\+problem.\+ans} = fun2(L, 48)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Team Dominatrix
+\end{DoxyAuthor}
+Illustrates doxygen-\/style comments for documenting a Python program file and the functions in that file. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{python__problem_8py_aa5fcea23fc1ba14c5e21dfeb25a73376}\label{python__problem_8py_aa5fcea23fc1ba14c5e21dfeb25a73376}} 
+\index{python\_problem.py@{python\_problem.py}!fun1@{fun1}}
+\index{fun1@{fun1}!python\_problem.py@{python\_problem.py}}
+\doxysubsubsection{\texorpdfstring{fun1()}{fun1()}}
+{\footnotesize\ttfamily def python\+\_\+problem.\+fun1 (\begin{DoxyParamCaption}\item[{}]{l }\end{DoxyParamCaption})}
+
+
+
+Sorts an input list in ascending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & the input list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sorted list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{python__problem_8py_aeb8631d95a0e5c21716de1efa0a93f88}\label{python__problem_8py_aeb8631d95a0e5c21716de1efa0a93f88}} 
+\index{python\_problem.py@{python\_problem.py}!fun2@{fun2}}
+\index{fun2@{fun2}!python\_problem.py@{python\_problem.py}}
+\doxysubsubsection{\texorpdfstring{fun2()}{fun2()}}
+{\footnotesize\ttfamily def python\+\_\+problem.\+fun2 (\begin{DoxyParamCaption}\item[{}]{l,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Performs binary search for a specified input value on a given input list which is assumed to be sorted in ascending order. 
+
+Also prints the mid and low values in each cut. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em l} & the input list \\
+\hline
+{\em x} & the value to be searched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 + the number of times the list had to be cut in half during the binary search to find the input value if it was present in the input list, -\/1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{python__problem_8py_aecd5932c95cd5087a63f7a9cdd9a9261}\label{python__problem_8py_aecd5932c95cd5087a63f7a9cdd9a9261}} 
+\index{python\_problem.py@{python\_problem.py}!fun3@{fun3}}
+\index{fun3@{fun3}!python\_problem.py@{python\_problem.py}}
+\doxysubsubsection{\texorpdfstring{fun3()}{fun3()}}
+{\footnotesize\ttfamily def python\+\_\+problem.\+fun3 (\begin{DoxyParamCaption}\item[{}]{L }\end{DoxyParamCaption})}
+
+
+
+Calculates the determinant of an input matrix given in the format of a list whose elements are lists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & the input matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the determinant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{python__problem_8py_a3e14eabd673d5450fc9ad0f55944ddbc}\label{python__problem_8py_a3e14eabd673d5450fc9ad0f55944ddbc}} 
+\index{python\_problem.py@{python\_problem.py}!make@{make}}
+\index{make@{make}!python\_problem.py@{python\_problem.py}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily def python\+\_\+problem.\+make (\begin{DoxyParamCaption}\item[{}]{filename }\end{DoxyParamCaption})}
+
+
+
+Reads a file containing newline seperated integers and returns a list of those integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of integers 
+\end{DoxyReturn}
